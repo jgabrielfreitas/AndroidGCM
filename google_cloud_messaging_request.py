@@ -33,13 +33,7 @@ def main():
 
             position_at_list = int(input("Qual item? (numero do dispositivo)\n"))
 
-            position = 0
-            for device in devices_in_parse:
-                if position == position_at_list:
-                    send_message(message, device['token'])
-                    break
-                else:
-                    position = position + 1
+            send_message(message, devices_in_parse[position_at_list]['token'])
 
         main()
 
